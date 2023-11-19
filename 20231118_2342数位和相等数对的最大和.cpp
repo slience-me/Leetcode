@@ -105,7 +105,7 @@ public:
 };
 
 
-int main() {
+int main_2342() {
     Solution solution = *new Solution;
     vector<int> myVector = {18, 43, 36, 13, 7};
     int max = solution.maximumSum(myVector);
