@@ -217,9 +217,10 @@ if (it != myUnorderedMap.end()) {
     std::string str2("Hello"); // 使用字符串常量初始化
     std::string str3(str2); // 拷贝构造函数
     std::string str4(5, 'a'); // 使用重复的字符初始化字符串
-```
+    ```
     
 - **赋值操作：**
+  
     ```cpp
     std::string str = "Hello";
     std::string anotherStr;
@@ -231,6 +232,7 @@ if (it != myUnorderedMap.end()) {
 ### 3.2 访问字符串内容：
 
 - **访问字符：**
+
     ```cpp
     std::string str = "Hello";
     char ch = str[0]; // 通过下标访问字符串中的字符
@@ -238,6 +240,7 @@ if (it != myUnorderedMap.end()) {
     ```
 
 - **获取子串：**
+
     ```cpp
     std::string str = "Hello, World!";
     std::string substr = str.substr(7, 5); // 从索引 7 开始，长度为 5 的子串
@@ -253,6 +256,7 @@ if (it != myUnorderedMap.end()) {
     ```
 
 - **插入和删除操作：**
+
     ```cpp
     std::string str = "Hello";
     str.insert(5, ", there"); // 在索引 5 处插入字符串
@@ -262,12 +266,14 @@ if (it != myUnorderedMap.end()) {
 ### 3.4 查询字符串信息：
 
 - **获取长度：**
+
     ```cpp
     std::string str = "Hello";
     int length = str.length(); // 获取字符串长度
     ```
 
 - **比较字符串：**
+
     ```cpp
     std::string str1 = "Hello";
     std::string str2 = "Hi";
@@ -277,12 +283,14 @@ if (it != myUnorderedMap.end()) {
 ### 3.5 其他操作：
 
 - **查找字符或子串：**
+
     ```cpp
     std::string str = "Hello, World!";
     size_t found = str.find("World"); // 查找子串的位置
     ```
 
 - **转换为 C-style 字符串：**
+
     ```cpp
     std::string str = "Hello";
     const char* cStr = str.c_str(); // 转换为 C-style 字符串
