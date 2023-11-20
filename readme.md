@@ -312,9 +312,10 @@ if (it != myUnorderedMap.end()) {
       // 执行操作，例如打印每个元素
       std::cout << element << " ";
   });
-```
+  ```
   
 - **std::find：** 在容器中查找指定值的元素。
+
   ```cpp
   std::vector<int> vec = {1, 2, 3, 4};
   auto it = std::find(vec.begin(), vec.end(), 3);
@@ -324,6 +325,7 @@ if (it != myUnorderedMap.end()) {
       // 没有找到值为 3 的元素
   }
   ```
+
 
 ### 4.2 排序和操作：
 
