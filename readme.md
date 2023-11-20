@@ -12,7 +12,7 @@
 
 ### 1.1 创建 vector
 
-```
+```cpp
 #include <vector>
 
 std::vector<int> myVector; // 创建一个空的整数向量
@@ -22,7 +22,7 @@ std::vector<int> myVector = {1, 2, 3, 4, 5}; // 创建带有初始值的整数�
 
 ### 1.2 添加和访问元素
 
-```
+```cpp
 myVector.push_back(6); // 在 vector 尾部添加元素 6
 int size = myVector.size(); // 获取 vector 的大小
 int element = myVector[2]; // 获取第三个元素（索引从 0 开始）
@@ -31,7 +31,7 @@ myVector[0] = 10; // 将第一个元素的值设置为 10
 
 ### 1.3 删除元素
 
-```
+```cpp
 myVector.pop_back(); // 删除尾部的元素
 myVector.erase(myVector.begin() + 2); // 删除指定位置（这里是第三个元素）的元素
 myVector.clear(); // 清空 vector
@@ -41,7 +41,7 @@ myVector.clear(); // 清空 vector
 
 #### 使用范围-based for 循环（C++11+）
 
-```
+```cpp
 for (int num : myVector) {
     // 使用 num
 }
@@ -49,7 +49,7 @@ for (int num : myVector) {
 
 #### 使用迭代器遍历
 
-```
+```cpp
 for (auto it = myVector.begin(); it != myVector.end(); ++it) {
     // 使用 *it
 }
@@ -57,33 +57,33 @@ for (auto it = myVector.begin(); it != myVector.end(); ++it) {
 
 ### 1.5 检查 vector 是否为空
 
-```
+```cpp
 bool isEmpty = myVector.empty(); // 判断 vector 是否为空
 ```
 
 ### 1.6 获取 vector 的首尾元素
 
-```
+```cpp
 int firstElement = myVector.front(); // 获取首元素
 int lastElement = myVector.back(); // 获取尾元素
 ```
 
 ### 1.7 向量的排序
 
-```
+```cpp
 std::sort(myVector.begin(), myVector.end()); // 默认升序排序
 std::sort(myVector.rbegin(), myVector.rend()); // 降序排序
 ```
 
 ### 1.8 在指定位置插入元素
 
-```
+```cpp
 myVector.insert(myVector.begin() + 3, 7); // 在第四个位置（索引为 3）插入元素 7
 ```
 
 ### 1.9 获取指定元素的位置
 
-```
+```cpp
 auto it = std::find(myVector.begin(), myVector.end(), 3); // 查找值为 3 的元素
 if (it != myVector.end()) {
     int index = std::distance(myVector.begin(), it); // 获取元素的索引
@@ -102,27 +102,27 @@ unordered_map和map类似，都是存储的key-value的值，可以通过key快�
 
 ### 2.1 包含头文件
 
-```
+```cpp
 #include <unordered_map>
 ```
 
 ### 2.2 创建 unordered_map
 
-```
+```cpp
 std::unordered_map<int, std::string> myUnorderedMap; // 创建一个空的整数到字符串的映射
 std::unordered_map<int, std::string> myUnorderedMap = {{1, "one"}, {2, "two"}, {3, "three"}}; // 创建带有初始值的映射
 ```
 
 ### 2.3 添加和访问元素
 
-```
+```cpp
 myUnorderedMap[4] = "four"; // 添加键值对
 std::string value = myUnorderedMap[2]; // 获取键为 2 的值
 ```
 
 ### 2.4 删除元素
 
-```
+```cpp
 myUnorderedMap.erase(3); // 删除键为 3 的键值对
 myUnorderedMap.clear(); // 清空 unordered_map
 ```
@@ -131,7 +131,7 @@ myUnorderedMap.clear(); // 清空 unordered_map
 
 #### 使用迭代器遍历
 
-```
+```cpp
 for (auto it = myUnorderedMap.begin(); it != myUnorderedMap.end(); ++it) {
     // 使用 it->first 和 it->second
 }
@@ -139,7 +139,7 @@ for (auto it = myUnorderedMap.begin(); it != myUnorderedMap.end(); ++it) {
 
 #### 使用范围-based for 循环（C++11+）
 
-```
+```cpp
 for (const auto &pair : myUnorderedMap) {
     // 使用 pair.first 和 pair.second
 }
@@ -147,20 +147,20 @@ for (const auto &pair : myUnorderedMap) {
 
 ### 2.6 检查 unordered_map 是否为空
 
-```
+```cpp
 bool isEmpty = myUnorderedMap.empty(); // 判断 unordered_map 是否为空
 ```
 
 ### 2.7 获取 unordered_map 的大小
 
-```
+```cpp
 
 int size = myUnorderedMap.size(); // 获取 unordered_map 的大小
 ```
 
 ### 2.8 检查键是否存在
 
-```
+```cpp
 if (myUnorderedMap.count(3) > 0) {
     // 键为 3 的元素存在
 }
@@ -170,7 +170,7 @@ if (myUnorderedMap.count(3) > 0) {
 
 `std::unordered_map` 允许使用自定义的哈希函数和键比较函数，以提供特定于类型的行为。
 
-```
+```cpp
 struct MyHash {
     size_t operator()(const MyType &key) const {
         // 自定义哈希函数逻辑
@@ -190,7 +190,7 @@ std::unordered_map<MyType, ValueType, MyHash, MyEqual> myMap;
 
 ### 2.10 查找键是否存在并获取对应的迭代器
 
-```
+```cpp
 std::unordered_map<int, std::string> myUnorderedMap = {{1, "one"}, {2, "two"}, {3, "three"}};
 
 auto it = myUnorderedMap.find(2);
