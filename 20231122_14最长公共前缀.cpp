@@ -82,7 +82,7 @@ public:
 };
 
 
-int main() {
+int main14() {
     Solution solution = *new Solution;
     vector<string> strVector = {"flower", "flower", "flower", "flower"};
     string res = solution.longestCommonPrefix(strVector);
