@@ -129,7 +129,7 @@ public:
 };
 
 
-int main() {
+int main1410() {
     Solution solution = *new Solution;
     string res = solution.entityParser("&&&amp&&");
     cout << res << endl;
