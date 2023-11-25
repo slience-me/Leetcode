@@ -7,8 +7,12 @@
 using namespace std;
 
 /*
- *  给你一个下标从 0 开始长度为 n 的整数数组 nums 和一个整数 target ，请你返回满足 0 <= i < j < n 且 nums[i] + nums[j] < target 的下标对 (i, j) 的数目。
- */
+ *  给定一个只包括 '('，')'，'{'，'}'，'['，']' 的字符串 s ，判断字符串是否有效。
+    有效字符串需满足：
+    左括号必须用相同类型的右括号闭合。
+    左括号必须以正确的顺序闭合。
+    每个右括号都有一个对应的相同类型的左括号。
+*/
 class Solution {
 public:
     // 1. 暴力解 采用了栈结构
@@ -99,7 +103,7 @@ public:
 };
 
 
-int main() {
+int main20() {
     Solution solution = *new Solution;
     bool res = solution.isValid("[{([[]");
     cout << res << endl;
