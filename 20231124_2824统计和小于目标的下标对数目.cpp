@@ -45,7 +45,7 @@ public:
 };
 
 
-int main() {
+int main2824() {
     Solution solution = *new Solution;
     vector<int> nums = {-6,2,5,-2,-7,-1,3};
     int res = solution.countPairs(nums, -2);
