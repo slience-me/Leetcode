@@ -44,8 +44,8 @@ public class Solution0001 {
 
 
     public static void main(String[] args) {
-        Solution0001 solution0001 = new Solution0001();
-        int[] ints = solution0001.twoSum(new int[]{2, 7, 11, 15}, 9);
+        Solution0001 solution = new Solution0001();
+        int[] ints = solution.twoSum(new int[]{2, 7, 11, 15}, 9);
         for (int anInt : ints) {
             System.out.println(anInt);
         }
